@@ -6,11 +6,14 @@ services:
     volumes:
       - ./backend:/var/www
       - ./backend/_docker/nginx/conf.d:/etc/nginx/conf.d
-    ports:
-      - "8080:80"
+#    ports:
+#      - "8080:80"
     depends_on:
       - app
     container_name: backend_nginx
+    expose:
+      - 8000
+    network_mode: host
 
 
 
@@ -23,6 +26,8 @@ services:
     container_name: backend_app
     depends_on:
       - db
+    network_mode: host
+
 
 
 
@@ -34,10 +39,14 @@ services:
     environment:
         MYSQL_DATABASE: sanctum
         MYSQL_ROOT_PASSWORD: vyazuti12345
-    ports:
-      - "8888:3306"
+#    ports:
+#      - "8888:3306"
     command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
     container_name: db
+    expose:
+      - 3306
+    network_mode: host
+
 
 
 
@@ -46,9 +55,11 @@ services:
     volumes:
       - ./frontend:/var/www
       - ./frontend/_docker/nginx/conf.d:/etc/nginx/conf.d
-    ports:
-      - "80:80"
+#    ports:
+#      - "80:80"
     expose:
       - 80
+    network_mode: host
+
 
 

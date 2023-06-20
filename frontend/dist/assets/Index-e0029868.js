@@ -1,1 +1,0 @@
-import{_ as n,n as a,r as o,o as t,c as s,a as r,b as c,d}from"./index-228208e1.js";const p={name:"Index",components:{navBar:a}};function _(l,m,i,x,f,u){const e=o("nav-bar");return t(),s("div",null,[r("div",null,[c(e)]),d(" App index ")])}const B=n(p,[["render",_]]);export{B as default};

@@ -1,1 +1,0 @@
-import{_ as a,e as n,r as o,o as t,c as s,a as r,b as c,d}from"./index-228208e1.js";const _={name:"index",components:{adminNavBar:n}};function i(m,p,l,x,f,u){const e=o("admin-nav-bar");return t(),s("div",null,[r("div",null,[c(e)]),d(" admin index page ")])}const B=a(_,[["render",i]]);export{B as default};

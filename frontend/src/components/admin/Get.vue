@@ -16,7 +16,7 @@ export default {
   },
   methods:{
     get(){
-      axios.get('http://api.site.local/api/testAPI').then(res => {
+      axios.get('http://localhost:8000/api/testAPI').then(res => {
         console.log( res)
       })
       // axios.post('http://localhost:8080/api/testAPI').then(res => {
@@ -27,15 +27,15 @@ export default {
       // })
     },
     login(){
-      axios.get('http://api.site.local/sanctum/csrf-cookie').then(r=>{
-        axios.post('http://api.site.local/login', {email: 'user@mail.ru', password: '123'})
+      axios.get('http://localhost:8000/sanctum/csrf-cookie').then(r=>{
+        axios.post('http://localhost:8000/login', {email: 'user@mail.ru', password: '123'})
             .then(res => {
               console.log(res)
             })
       })
     },
     getUsers(){
-      axios.get('http://api.site.local/api/user').then(re=>{
+      axios.get('http://localhost:8000/api/user').then(re=>{
         console.log(re)
       })
     }

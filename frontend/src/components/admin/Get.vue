@@ -27,12 +27,16 @@ export default {
       // })
     },
     login(){
-      axios.get('http://localhost:8000/sanctum/csrf-cookie').then(r=>{
-        axios.post('http://localhost:8000/login', {email: 'user@mail.ru', password: '123'})
-            .then(res => {
-              console.log(res)
-            })
-      })
+    //  axios.get('http://localhost:8000/sanctum/csrf-cookie').then(r=>{
+      //  axios.post('http://localhost:8000/login', {email: 'user@mail.ru', password: '123'})
+        //    .then(res => {
+          //    console.log(res)
+            //})
+     // })
+	axios.get('https://jsonplaceholder.typicode.com/posts')
+		.then(res=>{
+		console.log(res)	
+	})
     },
     getUsers(){
       axios.get('http://localhost:8000/api/user').then(re=>{

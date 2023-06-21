@@ -1,0 +1,1 @@
+import{_ as a,n,r as o,o as s,c as t,a as r,b as c,d as _}from"./index-a624512d.js";const p={name:"News",components:{navBar:n}};function d(l,m,f,i,u,v){const e=o("nav-bar");return s(),t("div",null,[r("div",null,[c(e)]),_(" News ")])}const x=a(p,[["render",d]]);export{x as default};
